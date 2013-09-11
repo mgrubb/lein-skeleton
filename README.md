@@ -4,7 +4,7 @@ A Leiningen template for my projects.
 
 ## Usage
 
-    lein new skel <project-name> description version
+    lein new skel <project-name> [description] [version]
 
 ## License
 
