@@ -14,15 +14,15 @@
 
 (defn skel
   "A custom template for my projects"
-  [name & args]
+  [name & [description version]]
   (let [raw-name name
         group (or (group-name raw-name) "co.grubb")
         name (project-name raw-name)
         project (string/join "/" [group name])
         msname (multi-segment name)
         fqname (string/join "/" [group msname])
-        description (or (first args) "FIXME: Project description")
-        version (or (second args) "0.1.0-SNAPSHOT")
+        description (or description "FIXME: Project description")
+        version (or version "0.1.0-SNAPSHOT")
         path (name-to-path msname)
         namespace (sanitize-ns msname)
         data {:raw-name raw-name
