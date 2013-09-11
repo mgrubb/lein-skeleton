@@ -1,4 +1,4 @@
-(ns leiningen.new.mgrubb
+(ns leiningen.new.skel
   (:use [leiningen.new.templates :only [renderer name-to-path year multi-segment
                                         project-name sanitize-ns ->files]])
   (:require [clojure.string :as string]
@@ -12,11 +12,11 @@
       (first ssplit)
       nil)))
 
-(defn mgrubb
-  "A custom template for mgrubb's projects"
+(defn skel
+  "A custom template for my projects"
   [name & args]
   (let [raw-name name
-        group (or (group-name raw-name) "co.mgrubb")
+        group (or (group-name raw-name) "co.grubb")
         name (project-name raw-name)
         project (string/join "/" [group name])
         msname (multi-segment name)
@@ -35,7 +35,7 @@
               :year (year)
               :version version
               :description description}
-          rfn (renderer "mgrubb")
+          rfn (renderer "skel")
         render #(vector %1 (rfn %2 data))]
     (->files data
              (render ".gitignore" "gitignore")

@@ -4,7 +4,7 @@ A Leiningen template for my projects.
 
 ## Usage
 
-lein new skeleton <project-name>
+    lein new skel <project-name> description version
 
 ## License
 
