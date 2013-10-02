@@ -1,4 +1,4 @@
-(defproject skel/lein-template "1.0.0"
+(defproject skel/lein-template "1.0.1"
   :description "Project skeleton for my new projects"
   :url "http://github.com/mgrubb/lein-skeleton"
   :license {:name "Eclipse Public License"
