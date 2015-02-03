@@ -41,7 +41,7 @@
              (render ".gitignore" "gitignore")
              (render "project.clj" "project.clj")
              (render "src/{{path}}.clj" "core.clj")
-             (render "test/{{path}}_test.clj" "test.clj")
+             (render "test/t_{{path}}.clj" "test.clj")
              (render "dev/user.clj" "user.clj")
              (render "README.md" "README.md")
              (render "LICENSE" "LICENSE"))))
